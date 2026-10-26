@@ -98,6 +98,13 @@ table.sched td.sesi-no .psub { display: inline; margin-left: 4px; }
 table.sched td.passage, table.sched td[data-label] { grid-column: 1 / -1; }
 .sched tr.warn { background: var(--todo-bg); }
 
+.sched-toggle > summary { align-items: center; }
+.sched-toggle > summary h2 { margin: 0; }
+.sched-toggle > summary::after { content: "Papar BE"; margin-left: auto; font-size: 13px; font-weight: 600; color: var(--brand); }
+.sched-toggle[open] > summary::after { content: "Sembunyi B4"; }
+.sched-toggle > summary::-webkit-details-marker { display: none; }
+.sched-toggle .where { padding: 0 16px; }
+.sched-toggle .tablewrap { padding: 0 12px 12px; }
 footer { margin-top: 36px; color: var(--muted); font-size: 13px; }
 
 /* tablets and up */
@@ -219,7 +226,8 @@ dialog.viewer button { font: inherit; font-weight: 600; padding: 8px 14px; borde
 </section>
 
 <section class="schedule" aria-labelledby="jadual">
-  <h2 id="jadual">Jadual Qari</h2>
+<details class="sched-toggle">
+  <summary><h2 id="jadual">Jadual Qari</h2><span class="meta">9 sesi</span></summary>
   <p class="where">MAJLIS KONVOKESYEN UUM KE-39 · (Kemaskini: 15/10/2026) · daripada <code>JADUAL QARI KONVOKESYEN KE 39 2026.NEWW 2.docx</code></p>
   
   <div class="tablewrap"><table class="sched">
@@ -280,6 +288,7 @@ dialog.viewer button { font: inherit; font-weight: 600; padding: 8px 14px; borde
   <td data-label="Qari simpanan"><span class="pname">Muhammad Kamal Fandi</span><span class="psub">Pusat Pengajian Multimedia dan Komunikasi (SMMTC)</span></td>
 </tr></tbody>
   </table></div>
+</details>
 </section>
 <div class="facts">
   <div class="fact font"><h3>Fon diperlukan</h3>
